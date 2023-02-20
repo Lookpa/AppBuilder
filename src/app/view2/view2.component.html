@@ -1,0 +1,16 @@
+<div class="column-layout group">
+  <igx-grid [data]="dataSourceFeaturesFeatures" primaryKey="featureId" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+    <igx-column field="featureId" dataType="number" header="featureId" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="productId" dataType="number" header="productId" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="description" dataType="string" header="description" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="requestorEmail" dataType="string" header="requestorEmail" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="dateAdded" dataType="date" header="dateAdded" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="product" dataType="string" header="product" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="productNavigation.productId" dataType="number" header="productNavigation productId" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="productNavigation.productDescription" dataType="string" header="productNavigation productDescription" [sortable]="true" [selectable]="false"></igx-column>
+  </igx-grid>
+</div>
+<div class="column-layout group">
+  <igx-category-chart [dataSource]="dataSourceFeaturesFeatures" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+</div>
